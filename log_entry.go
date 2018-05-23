@@ -9,9 +9,17 @@ import (
 // Agent is the actor who carried out the action.
 type Agent APIObject
 
+// Details is the info received for Channel.
+type Details struct {
+	Name  string
+	Query string
+	Time  string
+}
+
 // Channel is the means by which the action was carried out.
 type Channel struct {
-	Type string
+	Type    string
+	Details Details
 }
 
 // Context are to be included with the trigger such as links to graphs or images.
